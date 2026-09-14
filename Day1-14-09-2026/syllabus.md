@@ -1,205 +1,83 @@
-# Terraform – Complete Infrastructure as Code (IaC) Syllabus
+Module 1: Introduction to Infrastructure as Code (IaC)
 
-## Module 1: Introduction to Infrastructure as Code (IaC)
+Traditional Infrastructure Challenges
+What is IaC & Why Terraform?
+IaC vs Configuration Management Tools (Ansible, Chef)
+Introduction to HCL (HashiCorp Configuration Language)
+Module 2: Terraform Installation & Setup
 
-* Challenges of Traditional Infrastructure Management
-* What is Infrastructure as Code (IaC)?
-* Why Terraform?
-* Benefits and Use Cases of Terraform
-* Terraform vs Configuration Management Tools
+Install Terraform on Linux, Windows, Mac
+CLI Commands & Versioning
+Terraform vs CloudFormation vs Pulumi
+Module 3: Terraform Core Blocks
 
-  * Ansible
-  * Chef
-  * Puppet
-* Introduction to HCL (HashiCorp Configuration Language)
+terraform Block
+provider Block (with AWS)
+resource Block
+variable Block (input, output, locals)
+data Block
+module Block
+referencing resources
+Module 4: Working with Resources
 
-## Module 2: Terraform Installation & Environment Setup
+Resource Syntax and Arguments
+Resource Meta-Arguments:
+count
+depends_on
+for_each
+lifecycle
+Module 5: Variables & Outputs
 
-* Installing Terraform on:
+Input Variables:
+CLI variables
+.tfvars and auto.tfvars
+Environment variables
+Lists, Maps, and Complex Variables
+Sensitive Data Handling
+Output Values
+Module 6: Data Sources
 
-  * Linux
-  * Windows
-  * macOS
-* Configuring Terraform Environment
-* Terraform CLI Commands
-* Terraform Version Management
-* Terraform vs AWS CloudFormation vs Pulumi
+Using data block to reference existing infrastructure
+AWS Data Sources (AMI, VPC, Subnets, etc.)
+Module 7: Expressions & Functions
 
-## Module 3: Terraform Core Concepts & Blocks
+Built-in Functions (lookup, join, length, etc.)
+Dynamic Expressions
+Conditional Expressions and Loops
+Module 8: Provisioners & Null Resources
 
-* Understanding Terraform Configuration Files
-* `terraform` Block
-* `provider` Block
-* AWS Provider Configuration
-* `resource` Block
-* `variable` Block
-* `output` Block
-* `locals` Block
-* `data` Block
-* `module` Block
-* Resource Referencing and Dependencies
+local-exec and remote-exec
+Use of null_resource for triggers
+Module 9: Dynamic Blocks
 
-## Module 4: Working with Terraform Resources
+Dynamic Blocks Syntax
+Use Case Examples
+Module 10: Terraform State Management
 
-* Resource Syntax and Configuration
-* Resource Arguments and Attributes
-* Resource Dependencies
-* Terraform Meta-Arguments:
+terraform.tfstate & state.lock
+Local vs Remote State
+State Backends (S3 with DynamoDB Locking)
+State Commands (list, show, rm, mv)
+Module 11: Terraform Modules
 
-  * `count`
-  * `for_each`
-  * `depends_on`
-  * `lifecycle`
-* Resource Creation, Modification, and Deletion
+Create & Use Local Modules
+Modules from Terraform Registry
+Reusability and Best Practices
+Module 12: Workspaces
 
-## Module 5: Variables, Locals & Outputs
+Default vs Named Workspaces
+Workspace Isolation and Management
+Module 13: Terraform Cloud (Intro Only)
 
-* Understanding Input Variables
-* Passing Variables through:
+Terraform Cloud vs CLI
+Remote Runs, State Storage, VCS Integration
+Module 14: Real-Time CI/CD Integration
 
-  * CLI
-  * `.tfvars`
-  * `auto.tfvars`
-  * Environment Variables
-* Variable Types:
+Automate Terraform with GitHub Actions
+Jenkins + Terraform Pipeline
+One End-to-End Infrastructure Use Case
+Module 15: Practice & Interview Readiness
 
-  * String
-  * Number
-  * Boolean
-  * List
-  * Map
-  * Set
-  * Object
-  * Tuple
-* Complex Variables
-* Variable Validation
-* Sensitive Variables and Secure Data Handling
-* Local Values
-* Output Values
-
-## Module 6: Terraform Data Sources
-
-* Understanding Data Sources
-* Using `data` Blocks
-* Referencing Existing Infrastructure
-* AWS Data Sources:
-
-  * AMI
-  * VPC
-  * Subnets
-  * Availability Zones
-  * Security Groups
-* Data Sources vs Resources
-
-## Module 7: Terraform Expressions & Functions
-
-* Terraform Expressions
-* Built-in Functions:
-
-  * `lookup`
-  * `join`
-  * `length`
-  * `merge`
-  * `concat`
-  * `split`
-  * `flatten`
-* Conditional Expressions
-* For Expressions
-* Dynamic Expressions
-* Iteration and Collection Handling
-
-## Module 8: Provisioners & Null Resources
-
-* Understanding Terraform Provisioners
-* `local-exec`
-* `remote-exec`
-* Provisioner Use Cases and Limitations
-* Introduction to `null_resource`
-* Using Triggers with `null_resource`
-* Best Practices and Alternatives
-
-## Module 9: Dynamic Blocks
-
-* What are Dynamic Blocks?
-* Dynamic Block Syntax
-* Using `for_each` with Dynamic Blocks
-* Practical Use Cases
-* Dynamic Security Group and Network Configuration Examples
-
-## Module 10: Terraform State Management
-
-* Understanding Terraform State
-* `terraform.tfstate`
-* State Locking
-* Local vs Remote State
-* Remote Backends
-* AWS S3 Backend
-* State Locking with AWS
-* State Management Commands:
-
-  * `terraform state list`
-  * `terraform state show`
-  * `terraform state rm`
-  * `terraform state mv`
-* State File Best Practices
-* State Security and Backup
-
-## Module 11: Terraform Modules
-
-* What are Terraform Modules?
-* Root vs Child Modules
-* Creating Local Modules
-* Calling and Using Modules
-* Passing Variables to Modules
-* Module Outputs
-* Using Modules from the Terraform Registry
-* Module Versioning
-* Module Reusability
-* Terraform Module Best Practices
-
-## Module 12: Terraform Workspaces
-
-* Understanding Terraform Workspaces
-* Default vs Named Workspaces
-* Creating and Managing Workspaces
-* Workspace Isolation
-* Workspace-Specific Variables and State
-* Workspace Use Cases and Limitations
-
-## Module 13: Terraform Cloud – Introduction
-
-* Introduction to Terraform Cloud
-* Terraform Cloud vs Terraform CLI
-* Remote State Management
-* Remote Runs
-* VCS Integration
-* Connecting GitHub with Terraform Cloud
-* Basic Team and Collaboration Concepts
-
-## Module 14: Terraform CI/CD Integration
-
-* Terraform in CI/CD Pipelines
-* GitHub Actions + Terraform
-* Jenkins + Terraform
-* Terraform Workflow:
-
-  * `init`
-  * `validate`
-  * `plan`
-  * `apply`
-* Pull Request-Based Terraform Workflow
-* Approval and Manual Intervention
-* Secure Credential Management
-* End-to-End Infrastructure Deployment Project
-
-## Module 15: Hands-on Practice & Interview Preparation
-
-* Common Terraform Errors
-* Debugging and Troubleshooting
-* Terraform Best Practices
-* Real-Time Infrastructure Scenarios
-* Production-Oriented Terraform Use Cases
-* Scenario-Based Interview Questions
-* 20+ Terraform Interview Questions with Answers
-* Terraform Troubleshooting Scenarios
-* End-to-End Real-Time Project Discussion
+Common Errors & Troubleshooting
+Real-Time Scenarios
+20+ Interview Questions with Solutions
